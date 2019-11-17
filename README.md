@@ -1,5 +1,7 @@
 To use the tools, you need Python 3.8, After Effects, and Adobe Flash/Animate installed.
 
+Use AE CS6 (11) for season 4 and AE CC 2014 (13) for later seasons.
+
 1. Place tools, **`scenes`** folder (AFX files)  and **`scenesetups`** folder (Flash files) in a new empty folder.
 
 3. Open **`Config.ini`** and edit values:
