@@ -166,9 +166,19 @@ function processLayerProperties(layer)
                 //Size
                 processProperty(effect.property("ADBE Turbulent Displace-0003"), mulByUpscaleFactor);
                 break;
+			case "ADBE Lightning 2": //Random based, impossible to match 1:1
+				//Core Radius
+				processProperty(effect.property("ADBE Lightning 2-0006"), mulByUpscaleFactor);
+				//Glow Radius
+				processProperty(effect.property("ADBE Lightning 2-0011"), mulByUpscaleFactor);
+				//Forking
+				//TODO 3rd root is still too much
+				processProperty(effect.property("ADBE Lightning 2-0017"), function(v) {
+					return Math.pow(v * 100, 1 / (upscaleFactor + 1)) / 100;
+				});
+				break;
             //Known effects which do not need upscaling property-wise.
 			case "ADBE Echo":
-			case "ADBE Lightning 2": //Todo check and fix
 			case "CC Light Burst 2.5": //Ray Length is independent from resolution?
 			case "CC Light Rays": //Apparently Radius property doesn't need upscaling
 			case "tc Sound Keys":
