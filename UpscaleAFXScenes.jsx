@@ -118,7 +118,7 @@ function processLayerProperties(layer)
                 break;
             case "ADBE Radial Blur":
                 //Amount
-                processProperty(effect.property("ADBE Fast Blur-0001"), mulByUpscaleFactor);
+                processProperty(effect.property("ADBE Radial Blur-0001"), mulByUpscaleFactor);
                 break;
             case "ADBE Glo2":
                 //Glow Radius
