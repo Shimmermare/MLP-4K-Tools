@@ -158,8 +158,13 @@ function processLayerProperties(layer)
                 //Blur Radius
                 processProperty(effect.property("ADBE Box Blur2-0001"), mulByUpscaleFactor);
                 break;
+			case "ADBE Turbulent Displace":
+                //Size
+                processProperty(effect.property("ADBE Turbulent Displace-0003"), mulByUpscaleFactor);
+                break;
             //Known effects which do not need upscaling property-wise.
-            // case "ADBE Displacement Map": 504 comp 6 l distr
+            case "ADBE Displacement Map":
+			case "ADBE Lightning 2":
             case "ADBE Threshold2":
             case "ADBE Solid Composite":
             case "ADBE Fractal Noise": //Random, impossible to match 1:1
