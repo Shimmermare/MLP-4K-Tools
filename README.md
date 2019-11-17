@@ -14,7 +14,7 @@ To use the tools, you need Python 3.8, After Effects, and Adobe Flash/Animate in
     + **`swf`** - compiled from Flash/Animate as SWF file.
     + **`man`** - manually managed image sequence. Used for waifu2x-ed intro and credits.
 
-> **Tip**: insert lines **`START`** and **`END`** between scenes to tell scripts to process only part of the list. Can be used multiple times.
+> **Tip**: insert lines **`START`** and **`END`** between scenes to tell scripts to process only part of the list. Can be used multiple times.  
 > **Tip**: scene list supports `#` comments.
 
 5. Run **`UpscaleAFXScenes.jsx`** from suitable After Effects version. If everything is good and no warning was shown, go to next step. Otherwise you would need to:
