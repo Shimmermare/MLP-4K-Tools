@@ -120,6 +120,10 @@ function processLayerProperties(layer)
                 //Amount
                 processProperty(effect.property("ADBE Radial Blur-0001"), mulByUpscaleFactor);
                 break;
+			case "CC Radial Blur":
+                //Amount
+                processProperty(effect.property("CC Radial Blur-0002"), mulByUpscaleFactor);
+                break;
             case "ADBE Glo2":
                 //Glow Radius
                 processProperty(effect.property("ADBE Glo2-0003"), mulByUpscaleFactor);
@@ -163,27 +167,31 @@ function processLayerProperties(layer)
                 processProperty(effect.property("ADBE Turbulent Displace-0003"), mulByUpscaleFactor);
                 break;
             //Known effects which do not need upscaling property-wise.
-            case "ADBE Displacement Map":
-			case "ADBE Lightning 2":
-            case "ADBE Threshold2":
-            case "ADBE Solid Composite":
-            case "ADBE Fractal Noise": //Random, impossible to match 1:1
-            case "ADBE Find Edges":
-            case "ADBE CHANNEL MIXER":
-            case "ADBE Ramp":
-            case "APC Colorama":
-            case "ADBE Geometry2":
+			case "ADBE Echo":
+			case "ADBE Lightning 2": //Todo check and fix
+			case "CC Light Burst 2.5": //Ray Length is independent from resolution?
+			case "CC Light Rays": //Apparently Radius property doesn't need upscaling
+			case "tc Sound Keys":
             case "ADBE 4ColorGradient": //Check it
-            case "ADBE Posterize":
-            case "ADBE HUE SATURATION":
-            case "ADBE Color Key":
+            case "ADBE CHANNEL MIXER":
             case "ADBE Change To Color":
+            case "ADBE Color Key":
             case "ADBE Corner Pin":
+            case "ADBE Displacement Map":
             case "ADBE Easy Levels2":
+            case "ADBE Find Edges":
+            case "ADBE Fractal Noise": //Random, impossible to match 1:1
+            case "ADBE Geometry2":
+            case "ADBE HUE SATURATION":
             case "ADBE Noise":
+            case "ADBE Posterize":
+            case "ADBE Ramp":
             case "ADBE Simple Choker":
+            case "ADBE Solid Composite":
+            case "ADBE Threshold2":
             case "ADBE Tile":
             case "ADBE Tint":
+            case "APC Colorama":
             case "CC Toner":
             case "Keylight 906":
             case "VIDEOCOPILOT OpticalFlares": //It looks like it is pixel-agnostic but I'm not sure.
