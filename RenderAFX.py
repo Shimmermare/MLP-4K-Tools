@@ -35,7 +35,6 @@ def renderScene(scene, aep, outputDir):
     
     cmd = (
         "\"" + aerenderPath + "\""
-        " -reuse"
         " -project \"" + os.path.abspath(aep) + "\""
         " -comp \"" + compName + "\""
         " -RStemplate \"Multi-Machine Settings\""
