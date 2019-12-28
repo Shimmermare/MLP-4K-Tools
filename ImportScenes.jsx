@@ -137,34 +137,30 @@ if (missingScenes.length > 0)
     alert("Some scenes are missing footage: \n" + missingScenesTextArr.join(", "));
 }
 
-var cachedItemScenes;
 function getItemScenes()
 {
-    if (cachedItemScenes) return cachedItemScenes;
     for (var i = 1; i <= app.project.rootFolder.numItems; i++)
     {
         var item = app.project.rootFolder.item(i);
         if (item instanceof FolderItem && item.name === "Scenes")
         {
-            return cachedItemScenes = item;
+            return item;
         }
     }
-    return cachedItemScenes = app.project.items.addFolder("Scenes");
+    return app.project.items.addFolder("Scenes");
 }
 
-var cachedItemScenesRemoved;
 function getItemScenesRemoved()
 {
-    if (cachedItemScenesRemoved) return cachedItemScenesRemoved;
     for (var i = 1; i <= app.project.rootFolder.numItems; i++)
     {
         var item = app.project.rootFolder.item(i);
         if (item instanceof FolderItem && item.name === "ScenesRemoved")
         {
-            return cachedItemScenesRemoved = item;
+            return item;
         }
     }
-    return cachedItemScenesRemoved = app.project.items.addFolder("ScenesRemoved");
+    return app.project.items.addFolder("ScenesRemoved");
 }
 
 //Sort files alphabetically and pick first image
