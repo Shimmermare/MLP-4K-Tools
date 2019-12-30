@@ -95,7 +95,7 @@ for (var i = 0; i < sceneList.allScenes.length; i++)
     
     if (scene.type === "swf")
     {
-        var swfFile = new File(newSceneFolder.fullName + "/footage.swf");
+        var swfFile = new File(sceneFolder.fullName + "/footage.swf");
         if (!swfFile)
         {
             missingScenes.push(scene);
